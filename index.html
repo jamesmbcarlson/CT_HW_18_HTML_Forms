@@ -1,0 +1,123 @@
+<!--
+    James Carlson
+    Coding Temple - SE FT-144
+    Frontend Module 1 Lesson 3 Assignment: HTML Forms
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JamesCarlson">
+    <link rel="stylesheet" href="./static/stylin.css">
+    <title>HTML Forms</title>
+</head>
+<body>
+
+    <h1>Lesson 3 Assignment: HTML Forms</h1>
+    <br>
+    
+    <form action="submit.html" method="get">
+
+        <!-- PART I -->
+        <h2>1. Exploring New HTML5 Input Types</h2>
+        <br>
+        
+        <!-- Form Input: Email -->
+        <h3>Task 1: Implementing Email Input</h3>
+        <p role="alert" aria-live="assertive">Please enter a valid email address:</p>
+        <label for="email">Email:</label>
+        <!-- included my ole regex validation 😎 -->
+        <input type="email" id="email" name="email" 
+            pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" placeholder="Enter email" required>
+        <br><br>
+        
+        <!-- Form Input: Number -->
+        <h3>Task 2: Utilizing Number Input</h3>
+        <p role="alert" aria-live="assertive">Please enter an even number between 12 and 84 for some reason:</p>
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" placeholder="Enter number" min="12" max="84" step="2" required>
+        <br><br>
+
+        <!-- Form Input: Date -->
+        <h3>Task 3: Employing Date Input</h3>
+        <p role="alert" aria-live="assertive">Please select a date:</p>
+        <label for="date">Date: </label>
+        <input type="text" onfocus="(this.type = 'date')" id="date" name="date" placeholder="Enter a date" required>
+        <br><br>
+
+        <!-- Form Input: Range -->
+        <h3>Task 4: Enhancing User Experience with Range Input</h3>
+        <p role="alert" aria-live="assertive">Give this assignment a grade (range: 100 to 9001):</p>
+        <label for="rating">Grade: </label>
+        <input type="range" name="rating" min="100" max="9001" value="7800">
+        <br><br>
+
+
+        <!-- Form Input: Color -->
+        <h3>Task 5: Capturing Color with Color Input</h3>
+        <p role="alert" aria-live="assertive">Pick a color! Any color!</p>
+        <label for="color">Color: </label>
+        <input type="color" name="color" value="#00FF00">
+        <br><br><br><br>
+
+        <!-- PART II -->
+        <h2>2. Building a Comprehensive Web Form</h2>
+        <br>
+
+        <!-- Form Input: Select Menu -->
+        <h3>Task 1: Creating a Selection Experience</h3>
+        <p role="alert" aria-live="assertive">Please select your favorite programming language:</p>
+        <label for="language">Favorite language:</label>
+        <select name="language">
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="csharp">C#</option>
+            <option value="fortran">Fortran</option>
+            <option value="befunge">Befunge</option>
+        </select>
+        <br><br>
+
+        <!-- Form Input: Radio Buttons -->
+        <p role="alert" aria-live="assertive">Please select your level of expertise with your selected language:</p>
+        <p>My expertise:</p>
+        <div class="indent">
+            <input type="radio" name="expertise" id="beginner" value="beginner" required>
+            <label for="expertise">Beginner</label>
+            <br>
+            <input type="radio" name="expertise" id="intermediate" value="intermediate">
+            <label for="expertise">Intermediate</label>
+            <br>
+            <input type="radio" name="expertise" id="advanced" value="advanced">
+            <label for="expertise">Advanced</label>
+        </div>
+        <br>
+
+        <!-- Form Input: Checkboxes -->
+        <p role="alert" aria-live="assertive">Please select your preferred development platforms:</p>
+        <p>I prefer:</p>
+        <div class="indent">
+            <input type="checkbox" id="prefer-web" name="prefer-web" value="web">
+            <label for="prefer-web">Web</label>
+            <br>
+            <input type="checkbox" id="prefer-mobile" name="prefer-mobile" value="mobile">
+            <label for="prefer-mobile">Mobile</label>
+            <br>
+            <input type="checkbox" id="prefer-desktop" name="prefer-desktop" value="desktop">
+            <label for="prefer-desktop">Desktop</label>
+        </div>
+        <br><br>
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--
+        Task 2. Improving Accessibility
+        I added an aria alert to each prompt and all form elements have a for attribute
+        Tested with the Windows Narrator
+    -->
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    background-image:repeating-linear-gradient(
+        90deg,
+        rgb(255, 232, 255),
+        rgb(238, 221, 255),
+        rgb(213, 234, 255),
+        rgb(214, 255, 214)
+    );
+
+    margin: 42px 96px 180px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+h2, h3 {
+    margin-left: -32px;
+}
+
+.indent {
+    margin-left: 12px;
+}
+
+/* used these to debug 
+
+input:valid {
+    background-color: palegreen;
+}
+
+input:invalid {
+    background-color: lightpink;
+}
+*/
